@@ -1,0 +1,14 @@
+{
+  "name": "1.1",
+  "version": "1.0.0",
+  "description": "Is Unique",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Fernando Kakimoto",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}

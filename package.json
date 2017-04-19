@@ -1,0 +1,9 @@
+{
+  "name": "cracking-the-code-interview",
+  "version": "1.0.0",
+  "description": "Implementation of the programming interview questions",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Fernando Kakimoto",
+  "license": "MIT"
+}
