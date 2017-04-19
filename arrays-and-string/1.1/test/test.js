@@ -1,4 +1,4 @@
-const isUnique = require('../index.js');
+const isUnique = require('../solution.js');
 const assert = require('assert');
 
 describe('isUnique', function() {
