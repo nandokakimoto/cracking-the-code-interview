@@ -1,5 +1,5 @@
 var assert = require('assert');
-var urlify = require('../solution.js');
+var urlify = require('../solution1.js');
 
 describe('urlify', function() {
   describe('whitespace at the beginning', function() {
