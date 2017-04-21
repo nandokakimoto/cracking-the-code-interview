@@ -21,4 +21,4 @@ function isUnique(input, start, end, bitVector) {
 // O(nlog(n))
 module.exports = function(input) {
   return isUnique(input, 0, input.length - 1, {});
-}
+};
