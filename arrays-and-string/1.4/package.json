@@ -1,0 +1,14 @@
+{
+  "name": "1.4",
+  "version": "1.0.0",
+  "description": "Palindrome Permutation",
+  "main": "solution.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Fernando Kakimoto",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^3.3.0"
+  }
+}
