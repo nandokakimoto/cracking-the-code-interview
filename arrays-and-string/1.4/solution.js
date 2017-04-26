@@ -1,10 +1,11 @@
-module.exports = function(input) {
+function buildCharMap(input) {
   var array = input.split('');
   var charMap = {};
-  var oddChars = 0;
 
   for(var i = 0; i < array.length; i++) {
     var current = array[i].toLowerCase();
+
+    // Maps any word character.
     if (/\w/.test(current)) {
       if(charMap[current]) {
         charMap[current] += 1;
@@ -14,6 +15,12 @@ module.exports = function(input) {
     }
   }
 
+  return charMap
+}
+
+function isOddChars(charMap) {
+  var oddChars = 0;
+
   for(key in charMap) {
     if(charMap.hasOwnProperty(key)) {
       if(charMap[key] % 2 !== 0) {
@@ -22,5 +29,9 @@ module.exports = function(input) {
     }
   }
 
-  return oddChars <= 1;
+  return oddChars <= 1
+}
+
+module.exports = function(input) {
+  return isOddChars(buildCharMap(input));
 }
