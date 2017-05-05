@@ -1,0 +1,17 @@
+{
+  "name": "1.6",
+  "version": "1.0.0",
+  "description": "String Compression",
+  "main": "solution.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Fernando Kakimoto",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^3.3.0"
+  }
+}
