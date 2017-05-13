@@ -1,5 +1,5 @@
 var assert = require('assert');
-var rotate = require('../solution.js');
+var rotate = require('../solution1.js');
 
 describe('Rotate matrix', function() {
   it('should rotate a 1x1 matrix', function() {
