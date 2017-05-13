@@ -2,24 +2,27 @@ module.exports = function(matrix) {
   var n = matrix.length;
   var layers = n / 2;
 
-  for(var i = 0; i < layers; i++) {
-    var offset = (n - i) - 1;
+  for(var layer = 0; layer < layers; layer++) {
+    var begin = layer;
+    var end = (n - layer) - 1;
 
-    for(var j = i; j < offset; j++) {
+    for(var current = begin; current < end; current++) {
+      var offset = current - begin;
+
       // top
-      var top = matrix[i][j];
+      var top = matrix[begin][current];
 
       // replate top with left
-      matrix[i][j] = matrix[i + offset - j][i];
+      matrix[begin][current] = matrix[end - offset][begin];
 
       // replace left with bottom
-      matrix[i + offset - j][i] = matrix[offset][i + offset - j];
+      matrix[end - offset][begin] = matrix[end][end - offset];
 
       // replace bottom with right
-      matrix[offset][i + offset - j] = matrix[j][offset];
+      matrix[end][end - offset] = matrix[current][end];
 
       // replace right with top
-      matrix[j][offset] = top;
+      matrix[current][end] = top;
     }
   }
 
