@@ -1,0 +1,14 @@
+{
+  "name": "1.7",
+  "version": "1.0.0",
+  "description": "Rotate matrix",
+  "main": "solution.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Fernando Kakimoto",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^3.3.0"
+  }
+}
