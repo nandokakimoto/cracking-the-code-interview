@@ -1,5 +1,5 @@
 var assert = require('assert');
-var zeroMatrix = require('../solution.js');
+var zeroMatrix = require('../solution1.js');
 
 describe('Zero Matrix', function() {
   describe('matrix 1x1', function() {
