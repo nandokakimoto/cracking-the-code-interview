@@ -1,0 +1,14 @@
+{
+  "name": "1.8",
+  "version": "1.0.0",
+  "description": "Zero Matrix",
+  "main": "solution.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Fernando Kakimoto",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^3.4.1"
+  }
+}
