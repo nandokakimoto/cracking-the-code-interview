@@ -3,8 +3,12 @@ var rotate = require('../solution1.js');
 
 describe('Rotate matrix', function() {
   it('should rotate a 1x1 matrix', function() {
-    var matrix = [1];
-    var expected = [1];
+    var matrix = [
+      [1]
+    ];
+    var expected = [
+      [1]
+    ];
     assert.deepEqual(expected, rotate(matrix));
   });
 
