@@ -1,5 +1,5 @@
 var assert = require('assert');
-var stringRotation = require('../solution.js');
+var stringRotation = require('../solution1.js');
 
 describe('String Rotation', function(){
 
