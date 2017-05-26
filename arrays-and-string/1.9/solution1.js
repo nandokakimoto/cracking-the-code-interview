@@ -1,6 +1,4 @@
-function isSubstring(str, substr) {
-  return str.indexOf(substr) !== -1;
-}
+var isSubstring = require('./lib/is_substring.js');
 
 module.exports = function(s1, s2) {
   var i = 0;
