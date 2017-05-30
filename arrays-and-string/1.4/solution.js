@@ -15,13 +15,13 @@ function buildCharMap(input) {
     }
   }
 
-  return charMap
+  return charMap;
 }
 
 function isOddChars(charMap) {
   var oddChars = 0;
 
-  for(key in charMap) {
+  for(var key in charMap) {
     if(charMap.hasOwnProperty(key)) {
       if(charMap[key] % 2 !== 0) {
         oddChars += 1;
@@ -29,9 +29,9 @@ function isOddChars(charMap) {
     }
   }
 
-  return oddChars <= 1
+  return oddChars <= 1;
 }
 
 module.exports = function(input) {
   return isOddChars(buildCharMap(input));
-}
+};
