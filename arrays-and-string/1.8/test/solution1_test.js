@@ -12,10 +12,10 @@ describe('Zero Matrix', function() {
       ];
       assert.deepEqual(expected, zeroMatrix(matrix));
 
-      var matrix = [
+      matrix = [
         [0]
       ];
-      var expected = [
+      expected = [
         [0]
       ];
       assert.deepEqual(expected, zeroMatrix(matrix));
@@ -32,26 +32,26 @@ describe('Zero Matrix', function() {
       ];
       assert.deepEqual(expected, zeroMatrix(matrix));
 
-      var matrix = [
+      matrix = [
         [0,2,3,4,5,6]
       ];
-      var expected = [
+      expected = [
         [0,0,0,0,0,0]
       ];
       assert.deepEqual(expected, zeroMatrix(matrix));
 
-      var matrix = [
+      matrix = [
         [1,2,3,4,5,0]
       ];
-      var expected = [
+      expected = [
         [0,0,0,0,0,0]
       ];
       assert.deepEqual(expected, zeroMatrix(matrix));
 
-      var matrix = [
+      matrix = [
         [1,2,3,0,5,6]
       ];
-      var expected = [
+      expected = [
         [0,0,0,0,0,0]
       ];
       assert.deepEqual(expected, zeroMatrix(matrix));
@@ -78,7 +78,7 @@ describe('Zero Matrix', function() {
       ];
       assert.deepEqual(expected, zeroMatrix(matrix));
 
-      var matrix = [
+      matrix = [
         [0],
         [2],
         [3],
@@ -86,7 +86,7 @@ describe('Zero Matrix', function() {
         [5],
         [6]
       ];
-      var expected = [
+      expected = [
         [0],
         [0],
         [0],
@@ -96,7 +96,7 @@ describe('Zero Matrix', function() {
       ];
       assert.deepEqual(expected, zeroMatrix(matrix));
 
-      var matrix = [
+      matrix = [
         [1],
         [2],
         [3],
@@ -104,7 +104,7 @@ describe('Zero Matrix', function() {
         [5],
         [0]
       ];
-      var expected = [
+      expected = [
         [0],
         [0],
         [0],
@@ -114,7 +114,7 @@ describe('Zero Matrix', function() {
       ];
       assert.deepEqual(expected, zeroMatrix(matrix));
 
-      var matrix = [
+      matrix = [
         [1],
         [2],
         [3],
@@ -122,7 +122,7 @@ describe('Zero Matrix', function() {
         [5],
         [6]
       ];
-      var expected = [
+      expected = [
         [0],
         [0],
         [0],
@@ -149,26 +149,26 @@ describe('Zero Matrix', function() {
       ];
       assert.deepEqual(expected, zeroMatrix(matrix));
 
-      var matrix = [
+      matrix = [
         [1, 1, 1, 1, 1, 1, 0],
         [1, 1, 1, 1, 1, 1, 1],
         [1, 0, 1, 1, 1, 1, 1]
       ];
-      var expected = [
+      expected = [
         [0, 0, 0, 0, 0, 0, 0],
         [1, 0, 1, 1, 1, 1, 0],
         [0, 0, 0, 0, 0, 0, 0]
       ];
       assert.deepEqual(expected, zeroMatrix(matrix));
 
-      var matrix = [
+      matrix = [
         [0, 1, 1, 1, 1, 1, 1, 1, 0],
         [1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 1, 1, 1, 0, 1, 1, 1, 1],
         [1, 1, 1, 1, 1, 1, 1, 1, 1],
         [0, 1, 1, 1, 1, 1, 1, 1, 0]
       ];
-      var expected = [
+      expected = [
         [0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 1, 1, 1, 0, 1, 1, 1, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0],

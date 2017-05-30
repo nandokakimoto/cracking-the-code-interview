@@ -13,9 +13,11 @@ function zeroColumn(matrix, column) {
 module.exports = function(matrix) {
   var zeroFirstRow = false;
   var zeroFirtColumn = false;
+  var i;
+  var j;
 
   // Check if there is zero in first column
-  for(var i = 0; i < matrix.length; i++) {
+  for(i = 0; i < matrix.length; i++) {
     if(matrix[i][0] === 0) {
       zeroFirtColumn = true;
       break;
@@ -23,7 +25,7 @@ module.exports = function(matrix) {
   }
 
   // Check if there is zero in first row
-  for(var j = 0; j < matrix[0].length; j++) {
+  for(j = 0; j < matrix[0].length; j++) {
     if(matrix[0][j] === 0) {
       zeroFirstRow = true;
       break;
@@ -31,8 +33,8 @@ module.exports = function(matrix) {
   }
 
   // Use first row and column to store 0 info about matrix
-  for(var i = 1; i < matrix.length; i++) {
-    for(var j = 1; j < matrix[i].length; j++) {
+  for(i = 1; i < matrix.length; i++) {
+    for(j = 1; j < matrix[i].length; j++) {
       if (matrix[i][j] === 0) {
         matrix[i][0] = 0;
         matrix[0][j] = 0;
@@ -41,14 +43,14 @@ module.exports = function(matrix) {
   }
 
   // Change value to zero if first row element is zero
-  for(var i = 1; i < matrix.length; i++) {
+  for(i = 1; i < matrix.length; i++) {
     if(matrix[i][0] === 0) {
       zeroRow(matrix, i);
     }
   }
 
   // Change value to zero if first column element is zero
-  for(var j = 1; j < matrix[0].length; j++) {
+  for(j = 1; j < matrix[0].length; j++) {
     if(matrix[0][j] === 0) {
       zeroColumn(matrix, j);
     }
@@ -65,4 +67,4 @@ module.exports = function(matrix) {
   }
 
   return matrix;
-}
+};
