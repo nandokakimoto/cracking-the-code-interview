@@ -4,7 +4,7 @@ function initArray(n) {
     result[i] = [];
   }
   return result;
-};
+}
 
 function rotate(matrix) {
   var n = matrix.length;
