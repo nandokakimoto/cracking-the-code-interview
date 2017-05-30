@@ -1,7 +1,7 @@
 function compare(bigger, smaller) {
   var i = 0;
   var j = 0;
-  var diff = 0
+  var diff = 0;
 
   while(i < bigger.length && j < smaller.length && diff < 2) {
     if (bigger[i] === smaller[j]) {
