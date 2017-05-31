@@ -10,7 +10,7 @@ module.exports = function(head) {
   while(head.next !== null) {
     var data = head.next.data;
 
-    if(dataMap[data] === true) {
+    if(dataMap[data]) {
       head.next = head.next.next;
     } else {
       dataMap[data] = true;
