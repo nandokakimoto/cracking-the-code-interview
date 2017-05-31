@@ -1,8 +1,8 @@
 var assert = require('assert');
 var Node = require('../lib/node.js');
-var removeDups = require('../solution.js');
+var removeDups = require('../solution2.js');
 
-describe('Remove Dups In Place', function(){
+describe('Remove Dups With Buffer', function(){
   it('should return list with single element', function() {
     var head = new Node(10);
 
