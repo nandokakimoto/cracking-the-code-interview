@@ -1,0 +1,11 @@
+{
+  "name": "2.3",
+  "version": "1.0.0",
+  "description": "Delete Middle Node",
+  "main": "solution.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Fernando Kakimoto",
+  "license": "MIT"
+}
