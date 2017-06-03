@@ -1,6 +1,6 @@
 var assert = require('assert');
 var Node = require('../lib/node.js');
-var kthToLast = require('../solution.js');
+var kthToLast = require('../solution1.js');
 
 describe('Kth to Last', function() {
   it('should return -1 if empty list', function() {
