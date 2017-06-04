@@ -4,7 +4,7 @@ var partition = require('../solution.js');
 
 describe('Partition', function(){
   it('should return null if empty list', function(){
-    var list = partition(null, 10)
+    var list = partition(null, 10);
     assert.equal(list, null);
   });
 
@@ -17,12 +17,12 @@ describe('Partition', function(){
     assert.equal(list.next, null);
 
     // same
-    var list = partition(node, 10);
+    list = partition(node, 10);
     assert.equal(list.data, 10);
     assert.equal(list.next, null);
 
     // bigger
-    var list = partition(node, 15);
+    list = partition(node, 15);
     assert.equal(list.data, 10);
     assert.equal(list.next, null);
   });
