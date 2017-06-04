@@ -1,0 +1,11 @@
+{
+  "name": "2.4",
+  "version": "1.0.0",
+  "description": "Partition",
+  "main": "solution.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Fernando Kakimoto",
+  "license": "MIT"
+}
