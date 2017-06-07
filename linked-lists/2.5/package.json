@@ -1,0 +1,14 @@
+{
+  "name": "2.5",
+  "version": "1.0.0",
+  "description": "Sum Lists",
+  "main": "solution.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Fernando Kakimoto",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^3.4.2"
+  }
+}
