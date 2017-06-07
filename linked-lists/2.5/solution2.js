@@ -1,12 +1,15 @@
 var Node = require('./lib/node.js');
 
-function sumList(head1, head2, overhead) {
+function sumList(head1, head2, carryDigit) {
   var data1 = 0;
   var data2 = 0;
   var sum = 0;
   var head = null;
 
   if(head1 === null && head2 === null) {
+    if(carryDigit > 0) {
+      return new Node(1);
+    }
     return null;
   }
 
@@ -20,7 +23,7 @@ function sumList(head1, head2, overhead) {
     head2 = head2.next;
   }
 
-  sum = data1 + data2 + overhead;
+  sum = data1 + data2 + carryDigit;
   head = new Node(sum % 10);
 
   if(sum >= 10) {
