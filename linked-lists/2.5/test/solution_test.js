@@ -63,7 +63,7 @@ describe('Sum Lists - Reverse Order', function() {
     });
   });
 
-  describe('same length', function(){
+  describe('different length', function(){
     it('should sum values less than 10', function(){
       var node1 = new Node(1);
       var node2 = new Node(5).append(9).append(9);
@@ -77,12 +77,12 @@ describe('Sum Lists - Reverse Order', function() {
     });
 
     it('should sum values greater than 10', function(){
-      var node1 = new Node(8).append(9).append(9);
-      var node2 = new Node(9).append(8).append(9).append(2);
+      var node1 = new Node(5).append(9).append(9);
+      var node2 = new Node(5).append(8).append(9).append(2);
 
       var sum = sumLists(node1, node2);
 
-      assert.equal(sum.data, 7);
+      assert.equal(sum.data, 0);
       assert.equal(sum.next.data, 8);
       assert.equal(sum.next.next.data, 9);
       assert.equal(sum.next.next.next.data, 3);

@@ -31,7 +31,7 @@ module.exports = function(head1, head2) {
     current.data += sum % 10;
     previous = current;
 
-    if(sum > 10) {
+    if(sum >= 10) {
       current.next = new Node(1);
     } else {
       current.next = new Node(0);
