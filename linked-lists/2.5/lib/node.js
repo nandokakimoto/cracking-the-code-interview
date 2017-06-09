@@ -13,6 +13,22 @@ Node.prototype.append = function(value) {
   return this;
 };
 
+Node.prototype.prepend = function(value) {
+  var node = new Node(value);
+  node.next = this;
+  return node;
+};
+
+Node.prototype.length = function() {
+  var length = 0;
+  var temp = this;
+  while(temp.next !== null) {
+    length += 1;
+    temp = temp.next;
+  }
+  return length + 1;
+};
+
 Node.prototype.to_s = function() {
   var temp = this;
   var values = [];
