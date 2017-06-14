@@ -1,6 +1,6 @@
 var assert = require('assert');
 var Node = require('../lib/node.js');
-var palindrome = require('../solution.js');
+var palindrome = require('../solution1.js');
 
 describe('Palindrome', function() {
   describe('null list', function() {
