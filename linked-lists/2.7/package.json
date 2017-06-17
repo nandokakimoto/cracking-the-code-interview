@@ -1,0 +1,14 @@
+{
+  "name": "2.7",
+  "version": "1.0.0",
+  "description": "Intersection",
+  "main": "solution.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Fernando Kakimoto",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^3.4.2"
+  }
+}
