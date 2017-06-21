@@ -1,0 +1,14 @@
+{
+  "name": "arrays-and-string",
+  "version": "1.0.0",
+  "description": "Arrays and Strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive test */test"
+  },
+  "author": "Fernando Kakimoto",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^3.4.2"
+  }
+}
