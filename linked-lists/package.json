@@ -1,10 +1,10 @@
 {
-  "name": "2.4",
+  "name": "linked-lists",
   "version": "1.0.0",
-  "description": "Partition",
-  "main": "solution.js",
+  "description": "Linked List Problems",
+  "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --recursive test */test "
   },
   "author": "Fernando Kakimoto",
   "license": "MIT",

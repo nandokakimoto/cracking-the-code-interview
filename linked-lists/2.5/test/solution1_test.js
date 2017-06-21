@@ -1,5 +1,5 @@
 var assert = require('assert');
-var Node = require('../lib/node.js');
+var Node = require('../../lib/node.js');
 var sumLists = require('../solution1.js');
 
 describe('Sum Lists - Reverse Order', function() {

@@ -1,5 +1,5 @@
 var assert = require('assert');
-var Node = require('../lib/node.js');
+var Node = require('../../lib/node.js');
 
 describe('Node', function(){
   it('should define new node', function() {
@@ -16,3 +16,4 @@ describe('Node', function(){
     assert.equal(node.next.next.next.data, 0);
   });
 });
+

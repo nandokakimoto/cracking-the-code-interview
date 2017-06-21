@@ -1,4 +1,4 @@
-var Node = require('./lib/node.js');
+var Node = require('../lib/node.js');
 
 function sumList(head1, head2, carryDigit) {
   var data1 = 0;

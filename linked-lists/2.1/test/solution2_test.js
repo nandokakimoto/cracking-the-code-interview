@@ -1,5 +1,5 @@
 var assert = require('assert');
-var Node = require('../lib/node.js');
+var Node = require('../../lib/node.js');
 var removeDups = require('../solution2.js');
 
 describe('Remove Dups With Buffer', function(){

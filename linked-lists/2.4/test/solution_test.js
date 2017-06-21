@@ -1,5 +1,5 @@
 var assert = require('assert');
-var Node = require('../lib/node.js');
+var Node = require('../../lib/node.js');
 var partition = require('../solution.js');
 
 describe('Partition', function(){

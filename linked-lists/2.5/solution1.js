@@ -1,4 +1,4 @@
-var Node = require('./lib/node.js');
+var Node = require('../lib/node.js');
 
 module.exports = function(head1, head2) {
   var head = new Node(0);

@@ -1,5 +1,5 @@
 var assert = require('assert');
-var Node = require('../lib/node.js');
+var Node = require('../../lib/node.js');
 var deleteMiddleNode = require('../solution.js');
 
 describe('Delete Middle Node', function() {

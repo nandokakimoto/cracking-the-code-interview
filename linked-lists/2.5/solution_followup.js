@@ -1,4 +1,4 @@
-var Node = require('./lib/node.js');
+var Node = require('../lib/node.js');
 
 function prependZeros(head, times) {
   for(var i = 0; i < times; i++) {

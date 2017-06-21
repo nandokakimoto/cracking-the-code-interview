@@ -1,5 +1,5 @@
 var assert = require('assert');
-var Node = require('../lib/node.js');
+var Node = require('../../lib/node.js');
 var sumLists = require('../solution_followup.js');
 
 describe('Sum Lists - Recursive', function() {
