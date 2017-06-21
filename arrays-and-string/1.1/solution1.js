@@ -1,15 +1,16 @@
 // O(n)
-module.exports = function(input) {
-  var bitVector = {};
+export default function (input) {
+  const bitVector = {};
 
-  for (var i = 0; i < input.length; i++) {
-    var char = input[i];
+  for (let i = 0; i < input.length; i += 1) {
+    const char = input[i];
 
     if (bitVector[char]) {
       return false;
-    } else {
-      bitVector[char] = true;
     }
+
+    bitVector[char] = true;
   }
+
   return true;
-};
+}
