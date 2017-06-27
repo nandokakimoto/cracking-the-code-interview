@@ -21,6 +21,9 @@ class Stack {
   }
 
   pop() {
+    if (this.top === null) {
+      throw new Error('Empty stack');
+    }
     const data = this.top.data;
     this.top = this.top.next;
     return data;

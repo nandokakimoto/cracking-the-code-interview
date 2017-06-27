@@ -30,6 +30,15 @@ describe('Stack', () => {
     assert(stack.isEmpty());
   });
 
+  it('should throw error when poping from empty stack', () => {
+    const stack = new Stack();
+
+    stack.push(10);
+
+    assert(10, stack.pop());
+    assert.throws(() => { stack.pop(); }, /Empty stack/);
+  });
+
   it('should return the top', () => {
     const stack = new Stack();
 
@@ -38,5 +47,6 @@ describe('Stack', () => {
 
     assert(5, stack.peek());
     assert(5, stack.peek());
+    assert(!stack.isEmpty());
   });
 });
