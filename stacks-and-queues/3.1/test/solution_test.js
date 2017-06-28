@@ -79,12 +79,29 @@ describe('Three in One', () => {
 
   describe('third stack', () => {
     it('should allow push and pop operations', () => {
+      stacks.push(3, 5);
+      stacks.push(3, 10);
+
+      assert(stacks.isEmpty(1));
+      assert(stacks.isEmpty(2));
+      assert(!stacks.isEmpty(3));
+
+      assert.equal(10, stacks.pop(3));
+      assert.equal(5, stacks.pop(3));
     });
 
     it('should throw error if pushing above the stack limit', () => {
+      stacks.push(3, 5);
+      stacks.push(3, 10);
+
+      assert.throws(() => { stacks.push(3, 25); }, /Stack Overflow/);
     });
 
     it('should throw error if poping from empty stack', () => {
+      stacks.push(3, 5);
+
+      stacks.pop(3);
+      assert.throws(() => { stacks.pop(3); }, /Empty Stack/);
     });
   });
 });
