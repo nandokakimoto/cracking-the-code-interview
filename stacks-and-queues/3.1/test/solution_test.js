@@ -37,6 +37,8 @@ describe('Three in One', () => {
 
       stacks.pop(1);
       stacks.pop(1);
+
+      assert(stacks.isEmpty(1));
       assert.throws(() => { stacks.pop(1); }, /Empty Stack/);
     });
   });
@@ -63,6 +65,7 @@ describe('Three in One', () => {
       stacks.push(2, 10);
       stacks.push(2, 20);
       stacks.push(2, 15);
+      stacks.push(2, 35);
 
       assert.throws(() => { stacks.push(2, 25); }, /Stack Overflow/);
     });
@@ -73,6 +76,8 @@ describe('Three in One', () => {
 
       stacks.pop(2);
       stacks.pop(2);
+
+      assert(stacks.isEmpty(2));
       assert.throws(() => { stacks.pop(2); }, /Empty Stack/);
     });
   });
@@ -99,9 +104,34 @@ describe('Three in One', () => {
 
     it('should throw error if poping from empty stack', () => {
       stacks.push(3, 5);
-
       stacks.pop(3);
+
+      assert(stacks.isEmpty(3));
       assert.throws(() => { stacks.pop(3); }, /Empty Stack/);
+    });
+  });
+
+  describe('Multiple stacks', () => {
+    it('should allow push and pop operations', () => {
+      stacks.push(3, 5);
+      stacks.push(2, 15);
+      stacks.push(2, 10);
+      stacks.push(1, 30);
+      stacks.push(2, 20);
+      stacks.push(1, 25);
+
+      assert(!stacks.isEmpty(1));
+      assert(!stacks.isEmpty(2));
+      assert(!stacks.isEmpty(3));
+
+      assert.equal(25, stacks.pop(1));
+      assert.equal(30, stacks.pop(1));
+
+      assert.equal(20, stacks.pop(2));
+      assert.equal(10, stacks.pop(2));
+      assert.equal(15, stacks.pop(2));
+
+      assert.equal(5, stacks.pop(3));
     });
   });
 });
