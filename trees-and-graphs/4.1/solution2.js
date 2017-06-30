@@ -11,8 +11,8 @@ function hasRoute(origin, destination) {
     return true;
   }
 
-  for(let i = 0; i < origin.childrens.length; i += 1) {
-    const child = origin.childrens[i];
+  for(let i = 0; i < origin.children.length; i += 1) {
+    const child = origin.children[i];
 
     if (!child.visited && hasRoute(child, destination)) {
       return true;

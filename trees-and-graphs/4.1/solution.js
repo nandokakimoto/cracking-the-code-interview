@@ -13,7 +13,7 @@ function hasRoute(origin, destination) {
       return true;
     }
 
-    current.childrens.forEach((child) => {
+    current.children.forEach((child) => {
       if (!child.visited) {
         child.visited = true; // eslint-disable-line no-param-reassign
         queue.add(child);

@@ -20,9 +20,9 @@ describe('Route Beetwen Node (Breath-First-Search)', () => {
     five = new Node(5);
     six = new Node(6);
 
-    one.childrens = [three];
-    two.childrens = [one];
-    four.childrens = [two, three, five];
+    one.children = [three];
+    two.children = [one];
+    four.children = [two, three, five];
 
     graph = new Graph([one, two, three, four, five]);
   }
