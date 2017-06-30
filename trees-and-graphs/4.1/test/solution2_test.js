@@ -1,9 +1,9 @@
 import assert from 'assert';
-import hasRoute from '../solution';
+import hasRoute from '../solution2';
 import Node from '../../lib/graph_node';
 import Graph from '../../lib/graph';
 
-describe('Route Beetwen Node (Breath-First-Search)', () => {
+describe('Route Beetwen Node (Depth-First-Search)', () => {
   let graph;
   let one;
   let two;
