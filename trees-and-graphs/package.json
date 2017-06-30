@@ -1,10 +1,13 @@
 {
-  "name": "stacks-and-queues",
+  "name": "trees-and-graphs",
   "version": "1.0.0",
-  "description": "Stacks and Queues",
+  "description": "Tree and Graphs",
   "main": "",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register test/**/*.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Fernando Kakimoto",
   "license": "MIT",

@@ -1,10 +1,10 @@
 {
-  "name": "stacks-and-queues",
+  "name": "4.1",
   "version": "1.0.0",
-  "description": "Stacks and Queues",
-  "main": "",
+  "description": "Route Between Nodes",
+  "main": "solution.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register test/**/*.js"
+    "test": "mocha --compilers js:babel-core/register test/*.js"
   },
   "author": "Fernando Kakimoto",
   "license": "MIT",
