@@ -1,5 +1,5 @@
 import assert from 'assert';
-import hasRoute from '../solution';
+import hasRoute from '../solution1';
 import Node from '../../lib/graph_node';
 import Graph from '../../lib/graph';
 

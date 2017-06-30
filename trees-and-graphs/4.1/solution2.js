@@ -1,17 +1,15 @@
-import Queue from '../../stacks-and-queues/lib/queue';
-
 function hasRoute(origin, destination) {
   if (origin === null) {
     return false;
   }
 
-  origin.visited = true;
+  origin.visited = true; // eslint-disable-line no-param-reassign
 
   if (origin.name === destination.name) {
     return true;
   }
 
-  for(let i = 0; i < origin.children.length; i += 1) {
+  for (let i = 0; i < origin.children.length; i += 1) {
     const child = origin.children[i];
 
     if (!child.visited && hasRoute(child, destination)) {
