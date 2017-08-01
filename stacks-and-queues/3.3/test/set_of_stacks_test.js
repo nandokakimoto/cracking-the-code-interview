@@ -32,11 +32,42 @@ describe('Set of Stacks', () => {
 
   describe('pop', () => {
     it('should return element from the top of the current stack', () => {
+      for (let i = 0; i < limit; i += 1) {
+        setOfStacks.push(i);
+      }
 
+      assert.equal(setOfStacks.pop(), 2);
+      assert.equal(setOfStacks.pop(), 1);
+      assert.equal(setOfStacks.pop(), 0);
     });
+
     it('should return element from the top of the previous stack', () => {
+      const totalStacks = 3;
 
+      for (let stack = 1; stack <= totalStacks; stack += 1) {
+        for (let i = 0; i < limit; i += 1) {
+          setOfStacks.push(i);
+        }
+      }
+
+      assert.equal(setOfStacks.stacksCount(), 3);
+      assert.equal(setOfStacks.pop(), 2);
+      assert.equal(setOfStacks.pop(), 1);
+      assert.equal(setOfStacks.pop(), 0);
+
+      assert.equal(setOfStacks.stacksCount(), 2);
+      assert.equal(setOfStacks.pop(), 2);
+      assert.equal(setOfStacks.pop(), 1);
+      assert.equal(setOfStacks.pop(), 0);
+
+      assert.equal(setOfStacks.stacksCount(), 1);
+      assert.equal(setOfStacks.pop(), 2);
+      assert.equal(setOfStacks.pop(), 1);
+      assert.equal(setOfStacks.pop(), 0);
+
+      assert(setOfStacks.isEmpty());
     });
+
     it('should raise error if stack is empty', () => {
 
     });

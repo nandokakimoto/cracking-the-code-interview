@@ -17,7 +17,15 @@ class SetOfStacks {
   }
 
   pop() {
-    return this.currentStack.pop();
+    const result = this.currentStack.pop();
+    if (this.currentStack.isEmpty()) {
+      this.removeStack();
+    }
+    return result;
+  }
+
+  isEmpty() {
+    return this.stacks.length === 0;
   }
 
   stacksCount() {
@@ -28,6 +36,11 @@ class SetOfStacks {
     const newStack = new StackWithLimit(this.limit);
     this.stacks.push(newStack);
     this.currentStack = newStack;
+  }
+
+  removeStack() {
+    this.stacks.pop();
+    this.currentStack = this.stacks[this.stacks.length - 1];
   }
 }
 
