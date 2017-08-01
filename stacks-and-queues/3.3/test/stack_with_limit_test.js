@@ -21,4 +21,22 @@ describe('Stack with limit', () => {
       }, StackOverflow);
     });
   });
+
+  describe('isFull', () => {
+    it('returns false until elements count is less then limit', () => {
+      const limit = 3;
+      const stack = new StackWithLimit(limit);
+
+      assert(!stack.isFull());
+
+      stack.push(4);
+      assert(!stack.isFull());
+
+      stack.push(6);
+      assert(!stack.isFull());
+
+      stack.push(2);
+      assert(stack.isFull());
+    });
+  });
 });

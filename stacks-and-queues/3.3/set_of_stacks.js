@@ -8,12 +8,10 @@ class SetOfStacks {
   }
 
   push(data) {
-    try {
-      this.currentStack().push(data);
-    } catch (e) {
+    if (this.currentStack().isFull()) {
       this.addStack();
-      this.push(data);
     }
+    this.currentStack().push(data);
   }
 
   pop() {

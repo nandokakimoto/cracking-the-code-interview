@@ -17,6 +17,10 @@ class StackWithLimit extends Stack {
     super.push(data);
     this.elementsCount += 1;
   }
+
+  isFull() {
+    return this.elementsCount === this.limit;
+  }
 }
 
 export default StackWithLimit;
