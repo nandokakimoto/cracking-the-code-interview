@@ -17,10 +17,15 @@ class SetOfStacks {
   }
 
   pop() {
+    if (this.isEmpty()) {
+      throw new Error('Stacks are empty');
+    }
+
     const result = this.currentStack.pop();
     if (this.currentStack.isEmpty()) {
       this.removeStack();
     }
+
     return result;
   }
 

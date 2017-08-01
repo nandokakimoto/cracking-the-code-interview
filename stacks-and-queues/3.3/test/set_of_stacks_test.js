@@ -69,7 +69,10 @@ describe('Set of Stacks', () => {
     });
 
     it('should raise error if stack is empty', () => {
+      setOfStacks.push(3);
+      assert.equal(setOfStacks.pop(), 3);
 
+      assert.throws(() => setOfStacks.pop(), /empty/);
     });
   });
 
