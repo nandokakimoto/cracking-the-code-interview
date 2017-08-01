@@ -9,7 +9,7 @@ class SetOfStacks {
 
   push(data) {
     try {
-      this.currentStack.push(data);
+      this.currentStack().push(data);
     } catch (e) {
       this.addStack();
       this.push(data);
@@ -21,9 +21,24 @@ class SetOfStacks {
       throw new Error('Stacks are empty');
     }
 
-    const result = this.currentStack.pop();
-    if (this.currentStack.isEmpty()) {
+    const result = this.currentStack().pop();
+    if (this.currentStack().isEmpty()) {
       this.removeStack();
+    }
+
+    return result;
+  }
+
+  popAt(stackNumber) {
+    if (stackNumber > this.stacks.length) {
+      throw new Error('Provided stack does not exist');
+    }
+
+    const stack = this.stacks[stackNumber - 1];
+    const result = stack.pop();
+
+    if (stack.isEmpty()) {
+      this.stacks.splice(stackNumber - 1, 1);
     }
 
     return result;
@@ -40,12 +55,14 @@ class SetOfStacks {
   addStack() {
     const newStack = new StackWithLimit(this.limit);
     this.stacks.push(newStack);
-    this.currentStack = newStack;
   }
 
   removeStack() {
     this.stacks.pop();
-    this.currentStack = this.stacks[this.stacks.length - 1];
+  }
+
+  currentStack() {
+    return this.stacks[this.stacks.length - 1];
   }
 }
 
