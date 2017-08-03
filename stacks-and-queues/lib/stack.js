@@ -30,7 +30,7 @@ class Stack {
   }
 
   peek() {
-    return this.top;
+    return this.top.data;
   }
 }
 
