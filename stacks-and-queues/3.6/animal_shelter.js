@@ -1,51 +1,73 @@
+import Queue from '../lib/queue';
+
 class AnimalShelter {
   constructor() {
-    this.animals = [];
+    this.dogs = new Queue();
+    this.cats = new Queue();
+    this.order = 0;
   }
 
   enqueue(animal) {
-    this.animals.push(animal);
+    if (animal.isCat()) {
+      this.enqueueCat(animal);
+    } else {
+      this.enqueueDog(animal);
+    }
+
+    queue.enqueue(animal);
+  }
+
+  enqueueDog(dog) {
+    dog.order = this.order;
+    this.order += 1;
+    this.dogs.enqueue(dog);
+  }
+
+  enqueueCat(cat) {
+    cat.order = this.order;
+    this.order += 1;
+    this.cats.enqueue(cat);
   }
 
   dequeueAny() {
-    if (this.animals.length === 0) {
-      throw new Error('There are no animals in the shelter.');
+    if (this.dogs.isEmpty() && this.cats.isEmpty()) {
+      throw new Error('There are no animals in the shelter');
     }
 
-    return this.removeAnimalFromList(0);
+    if (this.dogs.isEmpty()) {
+      return this.dequeueCat();
+    }
+
+    if (this.cats.isEmpty()) {
+      return this.dequeueDog();
+    }
+
+    const dog = this.dogs.peek();
+    const cat = this.cats.peek();
+
+    if (dog.order < cat.order) {
+      return this.dequeueDog();
+    }
+
+    return this.dequeueCat();
   }
 
   dequeueDog() {
-    const dog = this.dequeueAnimal((animal) => animal.isDog());
-
-    if (dog === undefined) {
+    if (this.dog.isEmpty()) {
       throw new Error('There are no dogs in the shelter');
     }
 
-    return dog;
+    return this.dogs.dequeue();
   }
 
   dequeueCat() {
-    const cat = this.dequeueAnimal((animal) => animal.isCat());
-
-    if (cat === undefined) {
+    if (this.cats.isEmpty()) {
       throw new Error('There are no cats in the shelter');
     }
 
-    return cat;
+    return this.cats.dequeue();;
   }
 
-  dequeueAnimal(fn) {
-    for (let i = 0; i < this.animals.length; i += 1) {
-      if (fn.call(this, this.animals[i])) {
-        return this.removeAnimalFromList(i);
-      }
-    }
-  }
-
-  removeAnimalFromList(i) {
-    return this.animals.splice(i, 1)[0];
-  }
 }
 
 export default AnimalShelter;

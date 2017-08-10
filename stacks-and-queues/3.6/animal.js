@@ -1,6 +1,7 @@
 export class Animal {
   constructor(name) {
     this.name = name;
+    this.order = 0;
   }
 
   isDog() {
