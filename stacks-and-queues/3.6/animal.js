@@ -1,3 +1,5 @@
+/* eslint-disable class-methods-use-this */
+
 export class Animal {
   constructor(name) {
     this.name = name;
@@ -14,21 +16,16 @@ export class Animal {
 }
 
 export class Dog extends Animal {
-  constructor(name) {
-    super(name);
-  }
-
   isDog() {
     return true;
   }
 }
 
 export class Cat extends Animal {
-  constructor(name) {
-    super(name);
-  }
-
   isCat() {
     return true;
   }
 }
+
+/* eslint-enable class-methods-use-this */
+
