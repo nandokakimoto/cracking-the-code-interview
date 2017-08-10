@@ -13,20 +13,18 @@ class AnimalShelter {
     } else {
       this.enqueueDog(animal);
     }
-
-    queue.enqueue(animal);
   }
 
   enqueueDog(dog) {
     dog.order = this.order;
     this.order += 1;
-    this.dogs.enqueue(dog);
+    this.dogs.add(dog);
   }
 
   enqueueCat(cat) {
     cat.order = this.order;
     this.order += 1;
-    this.cats.enqueue(cat);
+    this.cats.add(cat);
   }
 
   dequeueAny() {
@@ -53,11 +51,11 @@ class AnimalShelter {
   }
 
   dequeueDog() {
-    if (this.dog.isEmpty()) {
+    if (this.dogs.isEmpty()) {
       throw new Error('There are no dogs in the shelter');
     }
 
-    return this.dogs.dequeue();
+    return this.dogs.remove();
   }
 
   dequeueCat() {
@@ -65,7 +63,7 @@ class AnimalShelter {
       throw new Error('There are no cats in the shelter');
     }
 
-    return this.cats.dequeue();;
+    return this.cats.remove();;
   }
 
 }
